@@ -54,4 +54,9 @@ public class StudySession extends BaseEntity {
 		this.member = member;
 		this.startedAt = LocalDateTime.now();
 	}
+
+	public void endSession() {
+		this.endedAt = LocalDateTime.now();
+		this.durationMinutes = (int) java.time.Duration.between(this.startedAt, this.endedAt).toMinutes();
+	}
 }
