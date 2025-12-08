@@ -36,6 +36,12 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     // 테스트용 H2 데이터베이스 추가
     testImplementation 'com.h2database:h2'
+	// 스프링 시큐리티
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+	// JWT
+	implementation 'io.jsonwebtoken:jjwt-api:0.13.0'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.13.0'
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.13.0'
 }
 
 tasks.named('test') {
